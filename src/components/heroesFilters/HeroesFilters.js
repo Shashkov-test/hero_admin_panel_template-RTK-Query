@@ -31,7 +31,7 @@ const HeroesFilters = () => {
 
   const renderFilters = (arr) => {
     if (arr.length === 0) {
-      return <h5 className="text-center mt-5">Фильтры не найдены</h5>;
+      return <h5 className="text-center mt-5">Filters not found</h5>;
     }
 
     return arr.map(({ name, className, label }) => {
@@ -57,7 +57,7 @@ const HeroesFilters = () => {
   return (
     <div className="card shadow-lg mt-4">
       <div className="card-body">
-        <p className="card-text">Отфильтруйте героев по элементам</p>
+        <p className="card-text">Filter the characters by element</p>
         <div className="btn-group">{elements}</div>
       </div>
     </div>
