@@ -5,12 +5,6 @@ import {
 } from "@reduxjs/toolkit";
 import { useHttp } from "../../hooks/http.hook";
 
-/* const initialState = {
-  filters: [],
-  filtersLoadingStatus: "idle",
-  activeFilter: "all",
-}; */
-
 const filtersAdapter = createEntityAdapter();
 
 const initialState = filtersAdapter.getInitialState({
@@ -22,7 +16,9 @@ export const fetchFilters = createAsyncThunk(
   "filters/fetchFilters",
   async () => {
     const { request } = useHttp();
-    return await request("http://localhost:3001/filters");
+    return await request(
+      "https://json-db-for-hero-admin-panel-template.vercel.app/filters"
+    );
   }
 );
 
